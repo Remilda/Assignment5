@@ -25,6 +25,23 @@
         }.bind(this));
     };
 
+    //Additional functions that need to be compared in the assert functions
+    Truck.prototype.createOrderTest = function(order) {
+        this.db.add(order.emailAddress, order);
+        return this.db.data[order.emailAddress];
+    };
+
+    Truck.prototype.printOrdersTest = function() {
+        var customerIdArray = Object.keys(this.db.getAll());
+        return customerIdArray.length;
+    };
+
+    Truck.prototype.deliverOrderTest = function(customerId) {
+        this.db.remove(customerId);
+        return this.db.data[customerId];
+    };
+
+
 
     App.Truck = Truck;
     window.App = App;

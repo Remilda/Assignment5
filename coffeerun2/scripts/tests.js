@@ -48,3 +48,10 @@ QUnit.test("Print Orders", function(assert) {
     // Orders are displayed on console
     assert.ok(true, "Passed!");
 });
+
+
+/*
+  What problem do you run into when you attempt to convert the code in Figure 8.32 into QUnit tests for Truck?
+  1. Every function that has been created causes problems at the console.log when you compare with an expected values.
+  2. No other function has any return value therefore it makes the return value "undefined" by default
+*/
